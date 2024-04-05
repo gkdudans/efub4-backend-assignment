@@ -54,5 +54,4 @@ public class Member extends BaseTimeEntity {
     public void withdrawMember() {
         this.status = MemberStatus.UNREGISTERED;
     }
-
 }

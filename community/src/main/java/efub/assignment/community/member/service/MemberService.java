@@ -48,16 +48,9 @@ public class MemberService {
         return member.getMemberId();
     }
 
-//    @Transactional
-//    public void withdraw(Long accountId) {
-//        Account account = findAccountById(accountId);
-//        account.withdrawAccount();
-//    }
-//
-//    public void delete(Long accountId) {
-//        Account account = findAccountById(accountId);
-//        accountRepository.delete(account);
-//    }
-
-
+    @Transactional
+    public void withdraw(Long memberId) {
+        Member member = findMemberById(memberId);
+        member.withdrawMember();
+    }
 }
