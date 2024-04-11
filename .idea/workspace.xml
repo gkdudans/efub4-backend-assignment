@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/community/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/CommunityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/CommunityApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberUpdateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberUpdateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/MemberService.java" afterDir="false" />
-    </list>
+    <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,6 +51,10 @@
     &quot;accountId&quot;: &quot;30bdf336-85a9-477c-884c-0a98566144a5&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -125,7 +118,7 @@
       <workItem from="1712256534216" duration="12236000" />
       <workItem from="1712658593100" duration="661000" />
       <workItem from="1712662942401" duration="731000" />
-      <workItem from="1712849444734" duration="4496000" />
+      <workItem from="1712849444734" duration="11127000" />
     </task>
     <servers />
   </component>
