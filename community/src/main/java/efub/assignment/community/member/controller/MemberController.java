@@ -22,14 +22,14 @@ public class MemberController {
     public MemberResponseDto signUp(@RequestBody @Valid final SignUpRequestDto requestDto){
         Long id = memberService.signUp(requestDto);
         Member findMember = memberService.findMemberById(id);
-        return MemberResponseDto.from(findMember);
+        return new MemberResponseDto(findMember);
     }
     /* 멤버(1명) 조회 기능 */
     @GetMapping("/{memberId}")
     @ResponseStatus(value = HttpStatus.OK)
     public MemberResponseDto getMember(@PathVariable Long memberId){
         Member findMember = memberService.findMemberById(memberId);
-        return MemberResponseDto.from(findMember);
+        return new MemberResponseDto(findMember);
     }
     /* 회원정보 수정 */
     @PatchMapping("/profile/{memberId}")
@@ -37,7 +37,7 @@ public class MemberController {
     public MemberResponseDto update(@PathVariable final Long memberId, @RequestBody @Valid final MemberUpdateRequestDto requestDto){
         Long id = memberService.update(memberId, requestDto);
         Member findMember = memberService.findMemberById(id);
-        return MemberResponseDto.from(findMember);
+        return new MemberResponseDto(findMember);
     }
 
     /* 회원 탈퇴 기능 */

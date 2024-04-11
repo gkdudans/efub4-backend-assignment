@@ -23,26 +23,29 @@ public class Member extends BaseTimeEntity {
     @Column(nullable = false)
     private String encodedPassword;
 
-    @Column(nullable = false, updatable = false, length = 16)
+    @Column(nullable = false, length = 16)
     private String nickname;
 
     @Column(nullable = false, length = 60)
     private String university;
 
     @Column(nullable = false, length = 10)
-    private String studentId;
+    private Long studentNo;
+    // String -> Long으로 수정
+    // StudentId -> StudentNo로 수정
 
     @Enumerated(EnumType.STRING) // enum 타입
     private MemberStatus status;
 
     @Builder // 객체 생성
-    public Member(String email, String password, String nickname, String university, String studentId) {
+    public Member(String email, String encodedPassword, String nickname, String university, Long studentNo) {
         this.email = email;
-        this.encodedPassword = password;
+        this.encodedPassword = encodedPassword;
         this.nickname = nickname;
         this.university = university;
-        this.studentId = studentId;
-        this.status = REGISTERED;
+        this.studentNo = studentNo;
+        this.status = MemberStatus.REGISTERED;
+        // 조금 더 명확하게 MemberStatus.REGISTERED로 수정
     }
 
     //닉네임 수정하기
