@@ -31,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,7 +118,7 @@
       <workItem from="1712256534216" duration="12236000" />
       <workItem from="1712658593100" duration="661000" />
       <workItem from="1712662942401" duration="731000" />
-      <workItem from="1712849444734" duration="11127000" />
+      <workItem from="1712849444734" duration="15219000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 package efub.assignment.community.board.domain;
 
+import efub.assignment.community.board.dto.BoardRequestDto;
 import efub.assignment.community.global.entity.BaseTimeEntity;
 import efub.assignment.community.member.domain.Member;
 import jakarta.persistence.*;
@@ -40,6 +41,12 @@ public class Board extends BaseTimeEntity {
         this.description = description;
         this.notice = notice;
         this.ownerNickname = ownerNickname;
+    }
+
+    public void updateBoard(BoardRequestDto requestDto, Member member) {
+        this.member = member;
+        this.boardName = requestDto.getBoardName();
+        this.ownerNickname = requestDto.getOwnerNickname();
     }
 
 
