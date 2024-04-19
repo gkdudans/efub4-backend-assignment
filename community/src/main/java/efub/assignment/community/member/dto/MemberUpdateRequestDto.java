@@ -12,8 +12,7 @@ public class MemberUpdateRequestDto {
     @NotBlank(message = "닉네임은 필수로 입력해야 합니다.")
     private String nickname;
 
-    @Builder
     public MemberUpdateRequestDto(String nickname) {
         this.nickname = nickname;
-    }
+    } // nickname 필드 하나만을 사용함 -> @Builder 대신 생성자 코드 작성
 }

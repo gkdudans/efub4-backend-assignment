@@ -16,24 +16,25 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     public Long signUp(SignUpRequestDto requestDto){
-        if (exixtsByEmail(requestDto.getEmail())) {
+        if (existsByEmail(requestDto.getEmail())) {
             throw new IllegalArgumentException("이미 존재하는 email입니다." + requestDto.getEmail());
         }
-        else if (existsByStudentId(requestDto.getStudentId())) {
-            throw new IllegalArgumentException("이미 존재하는 studentId입니다." + requestDto.getStudentId());
+        else if (existsByNickname(requestDto.getNickname())) {
+            throw new IllegalArgumentException("이미 존재하는 nickname입니다." + requestDto.getNickname());
         }
-        Member member = memberRepository.save(requestDto.toEntity());
+        String encodedPassword = requestDto.getEncodedPassword();
+        Member member = memberRepository.save(requestDto.toEntity(encodedPassword));
         return member.getMemberId();
     }
 
     @Transactional(readOnly = true)
-    public boolean exixtsByEmail(String email){
+    public boolean existsByEmail(String email){
         return memberRepository.existsByEmail(email);
     }
 
     @Transactional(readOnly = true)
-    public boolean existsByStudentId(String studentId){
-        return memberRepository.existsByStudentId(studentId);
+    public boolean existsByNickname(String nickname){
+        return memberRepository.existsByNickname(nickname);
     }
 
     @Transactional(readOnly = true)

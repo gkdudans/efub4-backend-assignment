@@ -12,21 +12,13 @@ public class MemberResponseDto {
     private String email;
     private String nickname;
     private String university;
-    private String studentId;
+    private Long studentNo;
 
-    public MemberResponseDto(Long memberId, String email, String nickname, String university, String studentId){
-        this.memberId = memberId;
-        this.email = email;
-        this.nickname = nickname;
-        this.university = university;
-        this.studentId = studentId;
-    }
-    public static MemberResponseDto from(Member member){
-        return new MemberResponseDto(
-                member.getMemberId(),
-                member.getEmail(),
-                member.getNickname(),
-                member.getUniversity(),
-                member.getStudentId());
+    public MemberResponseDto(Member member) {
+        this.memberId = member.getMemberId();
+        this.email = member.getEmail();
+        this.nickname = member.getNickname();
+        this.university = member.getUniversity();
+        this.studentNo = member.getStudentNo();
     }
 }
