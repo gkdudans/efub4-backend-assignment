@@ -42,7 +42,7 @@ public class PostController {
     }
 
     /* 포스트 1개 조회 */
-    @GetMapping("/{boardId}/{postId}")
+    @GetMapping("/{postId}")
     public PostResponseDto getPost(@PathVariable Long postId) {
         Post post = postService.findPostById(postId);
         return PostResponseDto.from(post);
