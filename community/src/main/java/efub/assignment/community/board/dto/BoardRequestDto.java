@@ -24,14 +24,13 @@ public class BoardRequestDto {
     private String description;
     private String notice;
 
-
     public Board toEntity(Member member) {
         return Board.builder()
                 .member(member)
                 .boardName(boardName)
                 .description(description)
                 .notice(notice)
-                //.ownerNickname(ownerNickname)
                 .build();
     }
+
 }

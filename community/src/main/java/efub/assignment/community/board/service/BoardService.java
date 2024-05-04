@@ -39,7 +39,6 @@ public class BoardService {
         Member member = memberService.findMemberById(Long.parseLong(requestDto.getMemberId()));
         board.updateBoard(requestDto, member);
         return board.getBoardId();
-
     }
 
     public void deleteBoard(Long boardId, Long memberId) {

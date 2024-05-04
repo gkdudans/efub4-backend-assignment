@@ -15,25 +15,25 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/posts")
+@RequestMapping("/boards/{boardId}/posts")
 public class PostController {
     private final PostService postService;
 
     /* 포스트 생성 */
-    @PostMapping("/{boardId}")
+    @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
-    public PostResponseDto createPost(@PathVariable Long boardId,
+    public PostResponseDto createPost(@PathVariable("boardId") Long boardId,
                                       @RequestBody @Valid final PostRequestDto requestDto) {
         Post post = postService.createNewPost(boardId, requestDto);
         return PostResponseDto.from(post);
     }
 
     /* 포스트 조회 */
-    @GetMapping("/{boardId}")
-    public AllPostResponseDto getAllPostsById(@PathVariable Long boardId) {
+    @GetMapping
+    public AllPostResponseDto getAllPostsById(@PathVariable("boardId") Long boardId) {
         List<PostResponseDto> list = new ArrayList<>();
         List<Post> posts = postService.findAllByBoard_BoardId(boardId);
-        posts.stream().forEach(post -> {
+        posts.forEach(post -> {
             PostResponseDto responseDto = PostResponseDto.from(post);
             list.add(responseDto);
         });
@@ -49,7 +49,7 @@ public class PostController {
     }
 
     /* 포스트 수정 */
-    @PatchMapping("/{boardId}/{postId}")
+    @PatchMapping("/{postId}")
     public PostResponseDto updatePost(@PathVariable Long postId,
                                       @RequestBody @Valid final PostRequestDto requestDto) {
         Long post_Id = postService.updatePost(postId, requestDto);
@@ -58,9 +58,9 @@ public class PostController {
     }
 
     /* 포스트 삭제 */
-    @DeleteMapping("/{boardId}/{postId}")
+    @DeleteMapping("/{postId}")
     public String deletePost(@PathVariable Long postId,
-                           @RequestParam Long memberId) {
+                           @RequestParam("memberId") Long memberId) {
         postService.deletePost(postId, memberId);
         return "포스트가 삭제되었습니다.";
     }
