@@ -39,9 +39,8 @@ public class Board extends BaseTimeEntity {
         this.notice = notice;
     }
 
-    public void updateBoard(BoardRequestDto requestDto, Member member) {
+    public void updateBoard(Member member) {
         this.member = member;
-        this.boardName = requestDto.getBoardName();
     }
 
 

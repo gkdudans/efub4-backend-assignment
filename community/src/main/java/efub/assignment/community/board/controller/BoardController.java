@@ -26,17 +26,16 @@ public class BoardController {
 
     /* 게시판 조회 */
     @GetMapping("/{boardId}")
-    public BoardResponseDto getBoard(@PathVariable Long boardId){
+    public BoardResponseDto getBoard(@PathVariable("boardId") Long boardId){
         Board board = boardService.findBoardById(boardId);
         return BoardResponseDto.from(board, board.getMember().getNickname());
     }
 
     /* 게시판 주인 수정 */
-    @PatchMapping("/{boardId}")
-    public BoardResponseDto updateBoard(@PathVariable Long id,
+    @PutMapping("/{boardId}")
+    public BoardResponseDto updateBoard(@PathVariable("boardId") Long id,
                                         @RequestBody @Valid final BoardRequestDto requestDto){
-        Long boardId = boardService.updateBoard(id, requestDto);
-        Board board = boardService.findBoardById(boardId);
+        Board board = boardService.updateBoard(id, requestDto);
         return BoardResponseDto.from(board, board.getMember().getNickname());
     }
 
