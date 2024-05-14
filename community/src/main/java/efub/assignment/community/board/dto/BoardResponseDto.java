@@ -20,13 +20,13 @@ public class BoardResponseDto {
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
-    public static BoardResponseDto from(Board board) {
+    public static BoardResponseDto from(Board board, String ownerNickname) {
         return new BoardResponseDto(
                 board.getBoardId(),
                 board.getBoardName(),
                 board.getDescription(),
                 board.getNotice(),
-                board.getOwnerNickname(),
+                ownerNickname,
                 board.getCreatedDate(),
                 board.getModifiedDate()
         );

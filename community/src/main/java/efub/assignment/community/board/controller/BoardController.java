@@ -21,24 +21,24 @@ public class BoardController {
     @ResponseStatus(value = HttpStatus.CREATED)
     public BoardResponseDto createBoard(@RequestBody @Valid final BoardRequestDto requestDto){
         Board board = boardService.createNewBoard(requestDto);
-        return BoardResponseDto.from(board);
+        return BoardResponseDto.from(board, board.getMember().getNickname());
     }
 
     /* 게시판 조회 */
     @GetMapping("/{boardId}")
-    public BoardResponseDto getBoard(@PathVariable Long boardId){
+    public BoardResponseDto getBoard(@PathVariable("boardId") Long boardId){
         Board board = boardService.findBoardById(boardId);
-        return BoardResponseDto.from(board);
+        return BoardResponseDto.from(board, board.getMember().getNickname());
     }
 
     /* 게시판 주인 수정 */
-    @PatchMapping("/{boardId}")
-    public BoardResponseDto updateBoard(@PathVariable Long boardId,
+    @PutMapping("/{boardId}")
+    public BoardResponseDto updateBoard(@PathVariable("boardId") Long id,
                                         @RequestBody @Valid final BoardRequestDto requestDto){
-        Long board_Id = boardService.updateBoard(boardId, requestDto);
-        Board board = boardService.findBoardById(board_Id);
-        return BoardResponseDto.from(board);
+        Board board = boardService.updateBoard(id, requestDto);
+        return BoardResponseDto.from(board, board.getMember().getNickname());
     }
+
 
     @DeleteMapping("/{boardId}")
     /* 게시판 삭제 */

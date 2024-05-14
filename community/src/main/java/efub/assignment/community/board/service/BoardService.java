@@ -34,12 +34,11 @@ public class BoardService {
         return board;
     }
 
-    public Long updateBoard(Long boardId, BoardRequestDto requestDto) {
+    public Board updateBoard(Long boardId, BoardRequestDto requestDto) {
         Board board = findBoardById(boardId);
         Member member = memberService.findMemberById(Long.parseLong(requestDto.getMemberId()));
-        board.updateBoard(requestDto, member);
-        return board.getBoardId();
-
+        board.updateBoard(member);
+        return board;
     }
 
     public void deleteBoard(Long boardId, Long memberId) {

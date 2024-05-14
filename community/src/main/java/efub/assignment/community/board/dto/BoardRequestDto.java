@@ -18,12 +18,11 @@ public class BoardRequestDto {
     @NotBlank(message = "게시판 이름은 필수입니다.")
     private String boardName;
 
-    @NotBlank(message = "게시판 주인 닉네임은 필수입니다.")
-    private String ownerNickname;
+//    @NotBlank(message = "게시판 주인 닉네임은 필수입니다.")
+//    private String ownerNickname;
 
     private String description;
     private String notice;
-
 
     public Board toEntity(Member member) {
         return Board.builder()
@@ -31,7 +30,7 @@ public class BoardRequestDto {
                 .boardName(boardName)
                 .description(description)
                 .notice(notice)
-                .ownerNickname(ownerNickname)
                 .build();
     }
+
 }

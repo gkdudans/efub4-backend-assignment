@@ -31,22 +31,16 @@ public class Board extends BaseTimeEntity {
     @Column(length = 50)
     private String notice;
 
-    @Column(nullable = false, length = 500)
-    private String ownerNickname;
-
     @Builder
-    public Board(Member member, String boardName, String description, String notice, String ownerNickname) {
+    public Board(Member member, String boardName, String description, String notice) {
         this.member = member;
         this.boardName = boardName;
         this.description = description;
         this.notice = notice;
-        this.ownerNickname = ownerNickname;
     }
 
-    public void updateBoard(BoardRequestDto requestDto, Member member) {
+    public void updateBoard(Member member) {
         this.member = member;
-        this.boardName = requestDto.getBoardName();
-        this.ownerNickname = requestDto.getOwnerNickname();
     }
 
 
