@@ -32,7 +32,7 @@ public class MemberController {
         return new MemberResponseDto(findMember);
     }
     /* 회원정보 수정 */
-    @PatchMapping("/profile/{memberId}")
+    @PatchMapping("/{memberId}")
     @ResponseStatus(value = HttpStatus.OK)
     public MemberResponseDto update(@PathVariable final Long memberId, @RequestBody @Valid final MemberUpdateRequestDto requestDto){
         Long id = memberService.update(memberId, requestDto);
@@ -41,7 +41,7 @@ public class MemberController {
     }
 
     /* 회원 탈퇴 기능 */
-    @PatchMapping("/{memberId}")
+    @DeleteMapping("/{memberId}")
     @ResponseStatus(value = HttpStatus.OK)
     public String withdraw(@PathVariable Long memberId){
         memberService.withdraw(memberId);
