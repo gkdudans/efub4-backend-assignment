@@ -1,6 +1,7 @@
 package efub.assignment.community.board.domain;
 
 import efub.assignment.community.board.dto.BoardRequestDto;
+import efub.assignment.community.comment.domain.Comment;
 import efub.assignment.community.global.entity.BaseTimeEntity;
 import efub.assignment.community.member.domain.Member;
 import jakarta.persistence.*;
@@ -8,6 +9,9 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

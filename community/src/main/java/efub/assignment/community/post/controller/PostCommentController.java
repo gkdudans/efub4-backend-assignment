@@ -3,7 +3,10 @@ package efub.assignment.community.post.controller;
 import efub.assignment.community.comment.domain.Comment;
 import efub.assignment.community.comment.dto.CommentRequestDto;
 import efub.assignment.community.comment.dto.CommentResponseDto;
+import efub.assignment.community.comment.dto.MemberInfoRequestDto;
+import efub.assignment.community.comment.service.CommentHeartService;
 import efub.assignment.community.comment.service.CommentService;
+import efub.assignment.community.post.dto.HeartRequestDto;
 import efub.assignment.community.post.dto.PostCommentResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,6 +20,7 @@ import java.util.List;
 @RequestMapping("/boards/{boardId}/posts/{postId}/comments")
 public class PostCommentController {
     private final CommentService commentService;
+    private final CommentHeartService commentHeartService;
 
     /* 게시글에 댓글 생성 */
     // ResponseEntity<>: @ResponseBody보다 HTTP 옵션에 유연함
@@ -55,6 +59,22 @@ public class PostCommentController {
         return "댓글이 삭제되었습니다.";
     }
 
+    /* 댓글 좋아요 생성 */
+    @PostMapping("/{commentId}/hearts")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public String createCommentHeart(@PathVariable Long commentId,
+                                     @RequestBody final MemberInfoRequestDto requestDto){
+        commentHeartService.create(commentId, requestDto);
+        return "좋아요를 눌렀습니다.";
+    }
 
+    /* 댓글 좋아요 삭제 */
+    @DeleteMapping("/{commentId}/hearts")
+    @ResponseStatus(value = HttpStatus.OK)
+    public String deleteCommentHeart(@PathVariable Long commentId,
+                                     @RequestParam("memberId") Long memberId){
+        commentHeartService.delete(commentId, memberId);
+        return "좋아요를 취소했습니다.";
+    }
 
 }

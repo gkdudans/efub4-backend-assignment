@@ -12,9 +12,9 @@ import efub.assignment.community.member.service.MemberService;
 import efub.assignment.community.post.domain.Post;
 import efub.assignment.community.post.service.PostService;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,6 +28,7 @@ public class CommentService {
     private final PostService postService;
     private final CommentRepository commentRepository;
 
+    /* 댓글 생성 */
     public Comment saveComment(Long boardId, Long postId, CommentRequestDto requestDto) {
         Member writer = memberService.findMemberById(requestDto.getMemberId());
         Board board = boardService.findBoardById(boardId);
@@ -44,16 +45,19 @@ public class CommentService {
         return comment;
     }
 
+    /* 게시글의 댓글 목록 조회 */
     public List<Comment> findPostCommentList(Long boardId, Long postId) {
         Board board = boardService.findBoardById(boardId);
         Post post = postService.findPostById(postId);
         return commentRepository.findAllByBoardAndPost(board, post);
     }
 
+    /* 작성자의 댓글 목록 조회 */
     public List<Comment> findMemberCommentList(Member writer) {
         return commentRepository.findAllByWriter(writer);
     }
 
+    /* 댓글 수정 */
     public Comment updateComment(Long commentId, CommentRequestDto requestDto) {
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
@@ -65,6 +69,7 @@ public class CommentService {
         return comment;
     }
 
+    /* 댓글 삭제 */
     public void deleteComment(Long commentId, Long memberId) {
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
@@ -72,5 +77,12 @@ public class CommentService {
             throw new CustomDeleteException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         commentRepository.delete(comment);
+    }
+
+    /* commentId 조회 */
+    @Transactional(readOnly = true)
+    public Comment findCommentById(Long commentId) {
+        return commentRepository.findById(commentId)
+                .orElseThrow(() -> new IllegalArgumentException("해당 댓글이 없습니다. id=" + commentId));
     }
 }

@@ -39,7 +39,6 @@ public class BoardController {
         return BoardResponseDto.from(board, board.getMember().getNickname());
     }
 
-
     @DeleteMapping("/{boardId}")
     /* 게시판 삭제 */
     public String deleteBoard(@PathVariable Long boardId,
