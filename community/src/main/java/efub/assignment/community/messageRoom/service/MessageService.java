@@ -1,6 +1,6 @@
 package efub.assignment.community.messageRoom.service;
 
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -33,7 +33,7 @@ public class MessageService {
         MessageRoom messageRoom = messageRoomService.findMessageRoomById(messageRoomId);
         Member sender = memberService.findMemberById(requestDto.getSenderId());
         if (sender!=messageRoom.getSender() && sender!=messageRoom.getReceiver()) {
-            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         Message message = Message.builder()
                 .sender(sender)

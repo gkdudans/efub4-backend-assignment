@@ -2,7 +2,7 @@ package efub.assignment.community.post.service;
 
 import efub.assignment.community.board.domain.Board;
 import efub.assignment.community.board.service.BoardService;
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -61,7 +61,7 @@ public class PostService {
     public void deletePost(Long postId, Long memberId){
         Post post = findPostById(postId);
         if(memberId!=post.getMember().getMemberId()){
-            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         postRepository.delete(post);
     }

@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler({CustomPermissionException.class})
-    protected ResponseEntity handleIllegalAccessException(CustomPermissionException e){
+    @ExceptionHandler({CustomException.class})
+    protected ResponseEntity handleIllegalAccessException(CustomException e){
         ErrorDto errorDto = new ErrorDto(
                 LocalDateTime.now().toString(),
                 e.getErrorCode().getStatus(),

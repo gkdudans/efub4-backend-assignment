@@ -1,5 +1,7 @@
 package efub.assignment.community.post.service;
 
+import efub.assignment.community.exception.CustomException;
+import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
 import efub.assignment.community.post.domain.Post;
@@ -23,7 +25,7 @@ public class PostHeartService {
         Member member = memberService.findMemberById(memberId);
         Post post = postService.findPostById(postId);
         if (isExistsByWriterAndPost(member, post)) {
-            throw new RuntimeException("이미 좋아요를 누른 게시물입니다.");
+            throw new CustomException(ErrorCode.ALREADY_LIKED);
         }
         PostHeart postHeart = PostHeart.builder()
                 .post(post)
