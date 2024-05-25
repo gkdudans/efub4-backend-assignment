@@ -61,5 +61,14 @@ public class MessageRoomController {
     public MessageRoomListResponseDto getMessageRoomList(@PathVariable Long memberId) {
         return messageRoomService.getMessageRoomList(memberId);
     }
+
+    /* 메시지룸 삭제 */
+    @DeleteMapping("/{messageRoomId}")
+    @ResponseStatus(value = HttpStatus.OK)
+    public String deleteMessageRoom(@PathVariable Long messageRoomId,
+                                    @RequestParam("memberId") Long memberId) {
+        messageRoomService.deleteMessageRoom(messageRoomId, memberId);
+        return "메시지룸 삭제가 완료되었습니다.";
+    }
 }
 
