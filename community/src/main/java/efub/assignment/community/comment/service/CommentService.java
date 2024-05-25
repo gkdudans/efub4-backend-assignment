@@ -1,5 +1,6 @@
 package efub.assignment.community.comment.service;
 
+import efub.assignment.community.alarm.service.AlarmService;
 import efub.assignment.community.board.domain.Board;
 import efub.assignment.community.board.service.BoardService;
 import efub.assignment.community.comment.domain.Comment;
@@ -26,6 +27,7 @@ public class CommentService {
     private final MemberService memberService;
     private final BoardService boardService;
     private final PostService postService;
+    private final AlarmService alarmService;
     private final CommentRepository commentRepository;
 
     /* 댓글 생성 */
@@ -41,6 +43,7 @@ public class CommentService {
                 .post(post)
                 .build();
         commentRepository.save(comment);
+        alarmService.createCommentAlarm(post.getBoard().getBoardName(), requestDto.getContent()); // 댓글 생성 시 알림
 
         return comment;
     }

@@ -41,7 +41,6 @@ public class PostCommentController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(PostCommentResponseDto.of(postId, commentList));
     }
-
     /* 댓글 수정 */
     @PatchMapping("/{commentId}")
     public ResponseEntity<CommentResponseDto> getAllComment(@PathVariable("commentId") Long commentId,
