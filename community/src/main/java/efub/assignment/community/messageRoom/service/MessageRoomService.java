@@ -12,11 +12,13 @@ import efub.assignment.community.post.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.ErrorCode;
 
 import java.util.List;
 
 @Service
-@Transactional
+@Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class MessageRoomService {
     private final MessageRoomRepository messageRoomRepository;
@@ -24,6 +26,7 @@ public class MessageRoomService {
     private final MemberService memberService;
     private final AlarmService alarmService;
 
+    @Transactional
     public MessageRoom add(Long memberId, MessageRoomRequestDto messageRoomRequestDto) {
         Member receiver = memberService.findMemberById(memberId);
         Member sender = memberService.findMemberById(messageRoomRequestDto.getSenderId());
@@ -39,28 +42,32 @@ public class MessageRoomService {
         return messageRoomRepository.save(messageRoom);
     }
 
-    @Transactional(readOnly = true)
     public boolean ismessageRoom(Long receiverId, Long senderId){
         Member receiver = memberService.findMemberById(receiverId);
         Member sender = memberService.findMemberById(senderId);
         return messageRoomRepository.existsByReceiverAndSender(receiver, sender);
     }
 
-    @Transactional(readOnly = true)
     public MessageRoom findByReceiverIdAndSenderIdAndPostId(Long receiverId, Long senderId, Long postId) {
         return messageRoomRepository.findByReceiver_MemberIdAndSender_MemberIdAndPost_PostId(receiverId, senderId, postId);
     }
 
-    @Transactional(readOnly = true)
     public MessageRoom findMessageRoomById(Long messageRoomId) {
         return messageRoomRepository.findById(messageRoomId)
                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 messageRoomId 입니다. messageRoomId=" + messageRoomId));
     }
 
-    @Transactional(readOnly = true)
     public MessageRoomListResponseDto getMessageRoomList(Long memberId) {
         Member member = memberService.findMemberById(memberId);
         List<MessageRoom> messageRoomList = messageRoomRepository.findAllByReceiverOrSender(member, member);
         return MessageRoomListResponseDto.of(member, messageRoomList);
+    }
+
+    public void deleteMessageRoom(Long messageRoomId, Long memberId) {
+        MessageRoom messageRoom = findMessageRoomById(messageRoomId);
+        if(memberId!=messageRoom.getReceiver().getMemberId() && memberId!=messageRoom.getSender().getMemberId()) {
+            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
+        }
+        messageRoomRepository.delete(messageRoom);
     }
 }

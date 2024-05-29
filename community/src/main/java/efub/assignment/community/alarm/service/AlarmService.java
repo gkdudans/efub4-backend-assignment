@@ -16,7 +16,6 @@ import java.util.List;
 public class AlarmService {
     private final AlarmRepository alarmRepository;
 
-    @Transactional
     public Alarm createCommentAlarm(String boardName, String commentContent) {
         String content = "댓글이 생성되었습니다: " + commentContent;
         Alarm alarm = Alarm.builder()
@@ -29,7 +28,6 @@ public class AlarmService {
 
     }
 
-    @Transactional
     public Alarm createMessageRoomAlarm() {
         String content = "쪽지방이 생성되었습니다";
         Alarm alarm = Alarm.builder()

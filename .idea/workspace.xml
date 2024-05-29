@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomPermissionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +111,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\dto" />
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\service" />
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\repository" />
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\domain" />
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\controller" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.CommunityApplication">
     <configuration name="community [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -173,6 +192,8 @@
       <workItem from="1716536760073" duration="225000" />
       <workItem from="1716537167039" duration="9588000" />
       <workItem from="1717007803092" duration="132000" />
+      <workItem from="1717008341218" duration="298000" />
+      <workItem from="1717009066338" duration="633000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,6 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class CustomException extends RuntimeException{
+public class CustomPermissionException extends RuntimeException{
     private final ErrorCode errorCode;
 }

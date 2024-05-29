@@ -32,4 +32,8 @@ public class MessageRoomStatusResponseDto {
             this.status = "messageRoom exist";
         }
     }
+
+    public MessageRoomStatusResponseDto(String statusMessage) {
+        this.status = statusMessage;
+    }
 }

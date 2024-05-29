@@ -6,7 +6,7 @@ import efub.assignment.community.board.service.BoardService;
 import efub.assignment.community.comment.domain.Comment;
 import efub.assignment.community.comment.dto.CommentRequestDto;
 import efub.assignment.community.comment.repository.CommentRepository;
-import efub.assignment.community.exception.CustomException;
+import efub.assignment.community.exception.CustomPermissionException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -66,7 +66,7 @@ public class CommentService {
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
         Member writer = memberService.findMemberById(requestDto.getMemberId());
         if (!comment.getWriter().equals(writer)) {
-            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         comment.update(requestDto.getContent());
         return comment;
@@ -77,7 +77,7 @@ public class CommentService {
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
         if (memberId!=comment.getWriter().getMemberId()) {
-            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         commentRepository.delete(comment);
     }

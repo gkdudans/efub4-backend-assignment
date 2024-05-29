@@ -4,7 +4,7 @@ import efub.assignment.community.comment.domain.Comment;
 import efub.assignment.community.comment.domain.CommentHeart;
 import efub.assignment.community.comment.dto.MemberInfoRequestDto;
 import efub.assignment.community.comment.repository.CommentHeartRepository;
-import efub.assignment.community.exception.CustomException;
+import efub.assignment.community.exception.CustomPermissionException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -27,7 +27,7 @@ public class CommentHeartService {
         Member member = memberService.findMemberById(requestDto.getMemberId());
         Comment comment = commentService.findCommentById(commentId);
         if (isExistsByWriterAndComment(member, comment)) {
-            throw new CustomException(ErrorCode.ALREADY_LIKED);
+            throw new CustomPermissionException(ErrorCode.ALREADY_LIKED);
         }
         CommentHeart commentHeart = CommentHeart.builder()
                 .comment(comment)
