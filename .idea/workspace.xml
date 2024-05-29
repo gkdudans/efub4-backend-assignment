@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/domain/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/domain/MessageRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/AllMessageResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRoomListResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRoomRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRoomStatusResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-05-10__4_10__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-05-10_오후_4_10_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/dto/BoardRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/dto/BoardRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberCommentResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberCommentResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostCommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostCommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/HeartRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/HeartRequestDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +49,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="community" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="community" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="community" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -92,31 +97,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build community.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.community [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CommunityApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-week5-session&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build community.executor": "Run",
+    "Gradle.community [bootJar].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CommunityApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "azul-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HY_MOON/efub4-backend-assignment - 복사본",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.community [bootJar]">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.CommunityApplication">
     <configuration name="community [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,6 +187,11 @@
       <workItem from="1715327476806" duration="841000" />
       <workItem from="1715519103057" duration="955000" />
       <workItem from="1715922457433" duration="182000" />
+      <workItem from="1716101815470" duration="651000" />
+      <workItem from="1716130555465" duration="14539000" />
+      <workItem from="1716476352545" duration="22242000" />
+      <workItem from="1716536760073" duration="225000" />
+      <workItem from="1716537167039" duration="9588000" />
     </task>
     <servers />
   </component>

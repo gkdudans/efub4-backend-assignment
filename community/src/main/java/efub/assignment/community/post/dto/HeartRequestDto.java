@@ -11,7 +11,7 @@ public class HeartRequestDto {
     @NotNull(message = "작성자는 필수로 입력되어야 합니다.")
     private Long memberId;
 
-    public HeartRequestDto(Long accountId) {
+    public HeartRequestDto(Long memberId) {
         this.memberId = memberId;
     }
 }
