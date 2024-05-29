@@ -31,10 +31,8 @@ jobs:
 
       - name: make application.yml
         run: |
-          mkdir ./community/src/main/resources 
-          cd ./community/src/main/resources
-          touch ./application.yml
-          echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
+          mkdir -p ./community/src/main/resources
+          echo "${{ secrets.APPLICATION_YML }}" > ./community/src/main/resources/application.yml
 
       - name: Build with Gradle
         run: |
@@ -55,7 +53,7 @@ jobs:
             --application-name ${{ env.CODE_DEPLOY_APPLICATION_NAME }} \
             --ignore-hidden-files \
             --s3-location s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip \
-            --source .
+            --source ./community
 
       - name: Deploy to AWS EC2 from S3
         run: |
