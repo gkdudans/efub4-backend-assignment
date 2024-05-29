@@ -30,7 +30,7 @@ public class MessageRoomController {
     public MessageRoomStatusResponseDto addmessageRoom(@PathVariable final Long receiverId,
                                                        @RequestBody final MessageRoomRequestDto requestDto) {
         MessageRoom messageRoom = messageRoomService.add(receiverId, requestDto);
-        Boolean ismessageRoom = messageRoomService.ismessageRoom(receiverId, requestDto.getSenderId());
+        Boolean ismessageRoom = messageRoomService.isMessageRoom(receiverId, requestDto.getSenderId());
         Member recevier = memberService.findMemberById(receiverId);
         Member sender = memberService.findMemberById(requestDto.getSenderId());
         return new MessageRoomStatusResponseDto(messageRoom, ismessageRoom, recevier, sender);
@@ -65,10 +65,10 @@ public class MessageRoomController {
     /* 메시지룸 삭제 */
     @DeleteMapping("/{messageRoomId}")
     @ResponseStatus(value = HttpStatus.OK)
-    public String deleteMessageRoom(@PathVariable Long messageRoomId,
-                                    @RequestParam("memberId") Long memberId) {
+    public MessageRoomStatusResponseDto deleteMessageRoom(@PathVariable Long messageRoomId,
+                                                          @RequestParam("memberId") Long memberId) {
         messageRoomService.deleteMessageRoom(messageRoomId, memberId);
-        return "메시지룸 삭제가 완료되었습니다.";
+        return new MessageRoomStatusResponseDto("메시지룸 삭제가 완료되었습니다.");
     }
 }
 
