@@ -50,7 +50,7 @@ jobs:
 
       - name: Upload to AWS S3
         run: |
-          cd ./community
+          echo "${{ secrets.APPSPEC_YML }}" > ./community/appspec.yml
           aws deploy push \
             --application-name ${{ env.CODE_DEPLOY_APPLICATION_NAME }} \
             --ignore-hidden-files \
