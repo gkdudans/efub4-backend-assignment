@@ -55,7 +55,7 @@ jobs:
 
       - name: Upload to AWS S3
         run: |
-          ls -al  # community 디렉토리 파일 리스트 출력
+          ls -al  ./community # community 디렉토리 파일 리스트 출력
           aws deploy push \
             --application-name ${{ env.CODE_DEPLOY_APPLICATION_NAME }} \
             --ignore-hidden-files \
