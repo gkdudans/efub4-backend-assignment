@@ -1,11 +1,12 @@
 package efub.assignment.community.comment.service;
 
+import efub.assignment.community.alarm.service.AlarmService;
 import efub.assignment.community.board.domain.Board;
 import efub.assignment.community.board.service.BoardService;
 import efub.assignment.community.comment.domain.Comment;
 import efub.assignment.community.comment.dto.CommentRequestDto;
 import efub.assignment.community.comment.repository.CommentRepository;
-import efub.assignment.community.exception.CustomDeleteException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -26,6 +27,7 @@ public class CommentService {
     private final MemberService memberService;
     private final BoardService boardService;
     private final PostService postService;
+    private final AlarmService alarmService;
     private final CommentRepository commentRepository;
 
     /* 댓글 생성 */
@@ -41,6 +43,7 @@ public class CommentService {
                 .post(post)
                 .build();
         commentRepository.save(comment);
+        alarmService.createCommentAlarm(post.getBoard().getBoardName(), requestDto.getContent()); // 댓글 생성 시 알림
 
         return comment;
     }
@@ -63,7 +66,7 @@ public class CommentService {
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
         Member writer = memberService.findMemberById(requestDto.getMemberId());
         if (!comment.getWriter().equals(writer)) {
-            throw new CustomDeleteException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         comment.update(requestDto.getContent());
         return comment;
@@ -74,7 +77,7 @@ public class CommentService {
         Comment comment = commentRepository.findById(commentId)
                 .orElseThrow(() -> new EntityNotFoundException("해당 id를 가진 Comment를 찾을 수 없습니다. id=" + commentId));
         if (memberId!=comment.getWriter().getMemberId()) {
-            throw new CustomDeleteException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         commentRepository.delete(comment);
     }

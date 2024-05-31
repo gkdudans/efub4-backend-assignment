@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-05-10__4_10__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-05-10_오후_4_10_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRoomStatusResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/dto/MessageRoomStatusResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +36,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="community" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="community" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="community" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -55,8 +46,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -106,17 +97,25 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-week5-session&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HY_MOON/efub4-backend-assignment - 복사본&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.community [bootJar]">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="efub.assignment.community.messageRoom.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CommunityApplication">
     <configuration name="community [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -182,10 +181,33 @@
       <workItem from="1715327476806" duration="841000" />
       <workItem from="1715519103057" duration="955000" />
       <workItem from="1715922457433" duration="182000" />
+      <workItem from="1716101815470" duration="651000" />
+      <workItem from="1716130555465" duration="14539000" />
+      <workItem from="1716476352545" duration="22242000" />
+      <workItem from="1716536760073" duration="225000" />
+      <workItem from="1716537167039" duration="9426000" />
+      <workItem from="1716574751423" duration="8337000" />
+      <workItem from="1716635617372" duration="5223000" />
+      <workItem from="1716646579778" duration="1327000" />
+      <workItem from="1716705582554" duration="3800000" />
+      <workItem from="1716973086586" duration="836000" />
+      <workItem from="1716973991393" duration="4142000" />
+      <workItem from="1717003342282" duration="195000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
