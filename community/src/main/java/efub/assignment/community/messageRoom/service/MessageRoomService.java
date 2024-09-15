@@ -42,7 +42,7 @@ public class MessageRoomService {
         return messageRoomRepository.save(messageRoom);
     }
 
-    public boolean ismessageRoom(Long receiverId, Long senderId){
+    public boolean isMessageRoom(Long receiverId, Long senderId){
         Member receiver = memberService.findMemberById(receiverId);
         Member sender = memberService.findMemberById(senderId);
         return messageRoomRepository.existsByReceiverAndSender(receiver, sender);
@@ -54,7 +54,7 @@ public class MessageRoomService {
 
     public MessageRoom findMessageRoomById(Long messageRoomId) {
         return messageRoomRepository.findById(messageRoomId)
-               .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 messageRoomId 입니다. messageRoomId=" + messageRoomId));
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 messageRoomId 입니다. messageRoomId=" + messageRoomId));
     }
 
     public MessageRoomListResponseDto getMessageRoomList(Long memberId) {
@@ -63,6 +63,7 @@ public class MessageRoomService {
         return MessageRoomListResponseDto.of(member, messageRoomList);
     }
 
+    @Transactional
     public void deleteMessageRoom(Long messageRoomId, Long memberId) {
         MessageRoom messageRoom = findMessageRoomById(messageRoomId);
         if(memberId!=messageRoom.getReceiver().getMemberId() && memberId!=messageRoom.getSender().getMemberId()) {

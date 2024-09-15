@@ -4,6 +4,15 @@ on:
   push:
     branches: [ "docker" ]
 
+env:
+  AWS_REGION: ap-northeast-2
+  S3_BUCKET_NAME: efub-community-s3
+  CODE_DEPLOY_APPLICATION_NAME: efub-community-codedeploy-app
+  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: efub-community-codedeploy-deployment-group
+
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

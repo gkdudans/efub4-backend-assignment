@@ -27,7 +27,7 @@ public class MessageRoomController {
     public MessageRoomStatusResponseDto addmessageRoom(@PathVariable final Long receiverId,
                                                        @RequestBody final MessageRoomRequestDto requestDto) {
         MessageRoom messageRoom = messageRoomService.add(receiverId, requestDto);
-        Boolean ismessageRoom = messageRoomService.ismessageRoom(receiverId, requestDto.getSenderId());
+        Boolean ismessageRoom = messageRoomService.isMessageRoom(receiverId, requestDto.getSenderId());
         Member recevier = memberService.findMemberById(receiverId);
         Member sender = memberService.findMemberById(requestDto.getSenderId());
         return new MessageRoomStatusResponseDto(messageRoom, ismessageRoom, recevier, sender);
