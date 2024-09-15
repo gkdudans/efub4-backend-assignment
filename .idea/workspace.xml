@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/community/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/alarm/service/AlarmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomPermissionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/controller/MessageRoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +43,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -87,37 +85,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build community.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.community [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CommunityApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HY_MOON/efub4-backend-assignment - 복사본&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build community.executor": "Run",
+    "Gradle.community [bootJar].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CommunityApplication.executor": "Run",
+    "git-widget-placeholder": "docker",
+    "jdk.selected.JAVA_MODULE": "azul-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-assignment11",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="efub.assignment.community.messageRoom.service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\dto" />
-      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\service" />
-      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\repository" />
-      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\domain" />
-      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment\community\src\main\java\efub\assignment\community\messageRoom\controller" />
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment11\community" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CommunityApplication">
@@ -152,6 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.community [bootJar]" />
         <item itemvalue="Gradle.community [bootJar]" />
       </list>
     </recent_temporary>
@@ -190,14 +191,32 @@
       <workItem from="1716130555465" duration="14539000" />
       <workItem from="1716476352545" duration="22242000" />
       <workItem from="1716536760073" duration="225000" />
-      <workItem from="1716537167039" duration="9588000" />
-      <workItem from="1717007803092" duration="132000" />
-      <workItem from="1717008341218" duration="298000" />
-      <workItem from="1717009066338" duration="633000" />
+      <workItem from="1716537167039" duration="9426000" />
+      <workItem from="1716574751423" duration="8337000" />
+      <workItem from="1716635617372" duration="5223000" />
+      <workItem from="1716646579778" duration="1327000" />
+      <workItem from="1716705582554" duration="3800000" />
+      <workItem from="1716973086586" duration="836000" />
+      <workItem from="1716973991393" duration="4142000" />
+      <workItem from="1717003342282" duration="195000" />
+      <workItem from="1726390767577" duration="536000" />
+      <workItem from="1726391396772" duration="462000" />
+      <workItem from="1726391908711" duration="1674000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
