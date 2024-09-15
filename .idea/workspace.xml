@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/community/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,7 +95,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.CommunityApplication.executor": "Run",
-    "git-widget-placeholder": "docker",
+    "git-widget-placeholder": "docker2",
     "jdk.selected.JAVA_MODULE": "azul-17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-assignment11",
@@ -154,6 +153,8 @@
       <list>
         <item itemvalue="Gradle.community [bootJar]" />
         <item itemvalue="Gradle.community [bootJar]" />
+        <item itemvalue="Gradle.community [bootJar]" />
+        <item itemvalue="Gradle.community [bootJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +203,8 @@
       <workItem from="1726390767577" duration="536000" />
       <workItem from="1726391396772" duration="462000" />
       <workItem from="1726391908711" duration="1674000" />
+      <workItem from="1726395038140" duration="188000" />
+      <workItem from="1726395251659" duration="133000" />
     </task>
     <servers />
   </component>
