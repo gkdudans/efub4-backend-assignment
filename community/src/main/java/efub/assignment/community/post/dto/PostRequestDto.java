@@ -17,9 +17,6 @@ public class PostRequestDto {
     @NotNull(message = "멤버 id는 필수입니다.")
     private Long memberId;
 
-//    @NotNull(message = "게시판 id는 필수입니다.")
-//    private Long boardId;
-
     @NotNull(message = "작성자 표시 방법은 필수입니다.")
     private Boolean anonymous;
 

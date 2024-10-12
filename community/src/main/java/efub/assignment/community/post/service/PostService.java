@@ -2,7 +2,7 @@ package efub.assignment.community.post.service;
 
 import efub.assignment.community.board.domain.Board;
 import efub.assignment.community.board.service.BoardService;
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -44,11 +44,11 @@ public class PostService {
     }
 
     @Transactional
-    public Post findPostById(Long PostId){
-        Post post = postRepository.findById(PostId)
-                .orElseThrow(() -> new IllegalArgumentException("해당 id를 가진 Post가 존재하지 않습니다."));
-        return post;
+    public Post findPostById(Long postId) {
+        return postRepository.findById(postId)
+                .orElseThrow(() -> new CustomException(ErrorCode.POST_NOT_FOUND));
     }
+
 
     public Long updatePost(Long PostId, PostRequestDto requestDto) {
         Post post = findPostById(PostId);
@@ -61,7 +61,7 @@ public class PostService {
     public void deletePost(Long postId, Long memberId){
         Post post = findPostById(postId);
         if(memberId!=post.getMember().getMemberId()){
-            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         postRepository.delete(post);
     }

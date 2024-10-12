@@ -1,6 +1,6 @@
 package efub.assignment.community.post.service;
 
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.service.MemberService;
@@ -25,7 +25,7 @@ public class PostHeartService {
         Member member = memberService.findMemberById(memberId);
         Post post = postService.findPostById(postId);
         if (isExistsByWriterAndPost(member, post)) {
-            throw new CustomPermissionException(ErrorCode.ALREADY_LIKED);
+            throw new CustomException(ErrorCode.ALREADY_LIKED);
         }
         PostHeart postHeart = PostHeart.builder()
                 .post(post)

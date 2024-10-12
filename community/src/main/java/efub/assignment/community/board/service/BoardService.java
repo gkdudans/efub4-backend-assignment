@@ -3,9 +3,8 @@ package efub.assignment.community.board.service;
 import efub.assignment.community.board.domain.Board;
 import efub.assignment.community.board.dto.BoardRequestDto;
 import efub.assignment.community.board.repository.BoardRepository;
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.member.domain.Member;
-import efub.assignment.community.member.dto.MemberUpdateRequestDto;
 import efub.assignment.community.member.service.MemberService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +43,7 @@ public class BoardService {
     public void deleteBoard(Long boardId, Long memberId) {
         Board board = findBoardById(boardId);
         if(!boardRepository.existsByBoardIdAndMember_MemberId(boardId, memberId)) {
-            throw new CustomPermissionException(PERMISSION_REJECTED_USER);
+            throw new CustomException(PERMISSION_REJECTED_USER);
         }
         boardRepository.delete(board);
     }

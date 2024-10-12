@@ -12,7 +12,7 @@ import efub.assignment.community.post.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import efub.assignment.community.exception.CustomPermissionException;
+import efub.assignment.community.exception.CustomException;
 import efub.assignment.community.exception.ErrorCode;
 
 import java.util.List;
@@ -67,7 +67,7 @@ public class MessageRoomService {
     public void deleteMessageRoom(Long messageRoomId, Long memberId) {
         MessageRoom messageRoom = findMessageRoomById(messageRoomId);
         if(memberId!=messageRoom.getReceiver().getMemberId() && memberId!=messageRoom.getSender().getMemberId()) {
-            throw new CustomPermissionException(ErrorCode.PERMISSION_REJECTED_USER);
+            throw new CustomException(ErrorCode.PERMISSION_REJECTED_USER);
         }
         messageRoomRepository.delete(messageRoom);
     }
