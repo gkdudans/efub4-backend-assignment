@@ -30,10 +30,10 @@ public class SignUpRequestDto {
     private String university;
 
     @NotNull(message = "학번은 필수입니다.") // @NotBlank -> @NotNull로 수정
-    private Long studentNo;
+    private String studentNo;
 
     @Builder
-    public SignUpRequestDto(String email, String encodedPassword, String nickname, String university, Long studentNo){
+    public SignUpRequestDto(String email, String encodedPassword, String nickname, String university, String studentNo){
         this.email = email;
         this.encodedPassword = encodedPassword;
         this.nickname = nickname;

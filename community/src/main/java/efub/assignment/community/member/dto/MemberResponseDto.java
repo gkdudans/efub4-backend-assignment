@@ -14,7 +14,7 @@ public class MemberResponseDto {
     private String email;
     private String nickname;
     private String university;
-    private Long studentNo;
+    private String studentNo;
 
     public MemberResponseDto(Member member) {
         this.memberId = member.getMemberId();

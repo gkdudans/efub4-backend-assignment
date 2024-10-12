@@ -35,9 +35,9 @@ public class Member extends BaseTimeEntity {
     private String university;
 
     @Column(nullable = false, length = 10)
-    private Long studentNo;
-    // String -> Long으로 수정
+    private String studentNo;
     // StudentId -> StudentNo로 수정
+    // Long -> String으로 수정
 
     @Enumerated(EnumType.STRING) // enum 타입
     private MemberStatus status;
@@ -47,7 +47,7 @@ public class Member extends BaseTimeEntity {
     private List<Comment> commentList = new ArrayList<>();
 
     @Builder // 객체 생성
-    public Member(String email, String encodedPassword, String nickname, String university, Long studentNo) {
+    public Member(String email, String encodedPassword, String nickname, String university, String studentNo) {
         this.email = email;
         this.encodedPassword = encodedPassword;
         this.nickname = nickname;
