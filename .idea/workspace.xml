@@ -5,6 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/community.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/community.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/community/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomPermissionException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/PostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/PostRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,12 +100,92 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build community.executor": "Run",
+    "Gradle.MemberControllerTest.executor": "Run",
+    "Gradle.PostControllerTest.executor": "Run",
+    "Gradle.community [bootJar].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CommunityApplication.executor": "Run",
+    "git-widget-placeholder": "docker",
+    "jdk.selected.JAVA_MODULE": "azul-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-assignment11",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="efub.assignment.community.messageRoom.service" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment11\community" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommunityApplication">
+  <component name="RunManager" selected="Gradle.PostControllerTest">
+    <configuration name="MemberControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/community" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;efub.assignment.community.MemberControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PostControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/community" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;efub.assignment.community.PostControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="community [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -118,8 +217,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.community [bootJar]" />
-        <item itemvalue="Gradle.community [bootJar]" />
+        <item itemvalue="Gradle.PostControllerTest" />
+        <item itemvalue="Gradle.MemberControllerTest" />
         <item itemvalue="Gradle.community [bootJar]" />
         <item itemvalue="Gradle.community [bootJar]" />
       </list>
@@ -167,6 +266,11 @@
       <workItem from="1716973086586" duration="836000" />
       <workItem from="1716973991393" duration="4142000" />
       <workItem from="1717003342282" duration="195000" />
+      <workItem from="1726390767577" duration="536000" />
+      <workItem from="1726391396772" duration="462000" />
+      <workItem from="1726391908711" duration="1674000" />
+      <workItem from="1728745963034" duration="2712000" />
+      <workItem from="1728749039751" duration="1421000" />
     </task>
     <servers />
   </component>

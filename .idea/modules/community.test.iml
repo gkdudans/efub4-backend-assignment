@@ -12,6 +12,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../community/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../community/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../community/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -97,6 +98,7 @@
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.4.14" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.21.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.mysql:mysql-connector-j:8.3.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.h2database:h2:2.2.224" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.glassfish.jaxb:jaxb-runtime:4.0.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.hibernate.common:hibernate-commons-annotations:6.0.6.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: io.smallrye:jandex:3.1.2" level="project" />
