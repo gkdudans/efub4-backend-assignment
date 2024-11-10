@@ -2,7 +2,6 @@ package efub.assignment.community.member.service;
 
 import efub.assignment.community.member.domain.Member;
 import efub.assignment.community.member.dto.MemberUpdateRequestDto;
-import efub.assignment.community.member.dto.SignUpRequestDto;
 import efub.assignment.community.member.repository.MemberRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -15,17 +14,17 @@ import org.springframework.transaction.annotation.Transactional;
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    public Long signUp(SignUpRequestDto requestDto){
-        if (existsByEmail(requestDto.getEmail())) {
-            throw new IllegalArgumentException("이미 존재하는 email입니다." + requestDto.getEmail());
-        }
-        else if (existsByNickname(requestDto.getNickname())) {
-            throw new IllegalArgumentException("이미 존재하는 nickname입니다." + requestDto.getNickname());
-        }
-        String encodedPassword = requestDto.getEncodedPassword();
-        Member member = memberRepository.save(requestDto.toEntity(encodedPassword));
-        return member.getMemberId();
-    }
+//    public Long signUp(SignUpRequestDto requestDto){
+//        if (existsByEmail(requestDto.getEmail())) {
+//            throw new IllegalArgumentException("이미 존재하는 email입니다." + requestDto.getEmail());
+//        }
+//        else if (existsByNickname(requestDto.getNickname())) {
+//            throw new IllegalArgumentException("이미 존재하는 nickname입니다." + requestDto.getNickname());
+//        }
+//        String encodedPassword = requestDto.getEncodedPassword();
+//        Member member = memberRepository.save(requestDto.toEntity(encodedPassword));
+//        return member.getMemberId();
+//    }
 
     @Transactional(readOnly = true)
     public boolean existsByEmail(String email){

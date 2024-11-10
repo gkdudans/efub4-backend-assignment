@@ -5,25 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1355294c-1563-42fc-9d21-6a63e599b2fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/handler/OAuth2AuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/jwt/TokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/utils/OAuth2UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/global/utils/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/TokenRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/TokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/CustomOAuth2UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/community.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/community.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/community.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/community/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/board/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentHeartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/comment/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/CustomPermissionException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/controller/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/MemberResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/dto/SignUpRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/messageRoom/service/MessageRoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/PostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/dto/PostRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostHeartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/post/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/community/src/main/java/efub/assignment/community/member/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,35 +102,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build community.executor": "Run",
-    "Gradle.MemberControllerTest.executor": "Run",
-    "Gradle.PostControllerTest.executor": "Run",
-    "Gradle.community [bootJar].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.CommunityApplication.executor": "Run",
-    "git-widget-placeholder": "docker",
-    "jdk.selected.JAVA_MODULE": "azul-17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HY_MOON/OneDrive/문서/GitHub/efub4-backend-assignment11",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build community.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MemberControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PostControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.community [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CommunityApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;docker&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HY_MOON/OneDrive/문서/GitHub/Bookwoori-Back/core&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="efub.assignment.community.messageRoom.service" />
@@ -137,7 +139,7 @@
       <recent name="C:\Users\HY_MOON\OneDrive\문서\GitHub\efub4-backend-assignment11\community" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PostControllerTest">
+  <component name="RunManager" selected="Spring Boot.CommunityApplication">
     <configuration name="MemberControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -270,7 +272,9 @@
       <workItem from="1726391396772" duration="462000" />
       <workItem from="1726391908711" duration="1674000" />
       <workItem from="1728745963034" duration="2712000" />
-      <workItem from="1728749039751" duration="1421000" />
+      <workItem from="1728749039751" duration="2049000" />
+      <workItem from="1731170072801" duration="6087000" />
+      <workItem from="1731238767840" duration="650000" />
     </task>
     <servers />
   </component>
